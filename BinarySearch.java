@@ -35,3 +35,4 @@ class GFG {
                                + "index " + result);
     }
 }
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20250219155359690903/Binary-Search-1.webp">Binary Search</img>
