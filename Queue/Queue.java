@@ -1,13 +1,14 @@
-import java.sql.SQLOutput;
+package Queue;
+import java.util.*;
 
-class circularQueue1{
+class queue1{
     int[] arr;
     int front;
     int rear;
     int capacity;
     int size;
 
-    circularQueue1(int capacity){
+    queue1(int capacity){
         this.capacity=capacity;
         this.arr=new int[capacity];
         this.front=0;
@@ -17,26 +18,26 @@ class circularQueue1{
     }
 
     void enqueue(int element){
-        if(size==capacity){
+        if(rear==capacity-1){
             System.out.println("Queue is empty");
 
         }
         else{
-            rear=(rear+1)%capacity;
+            rear++;
             arr[rear]=element;
             size++;
         }
 
     }
     int dequeue(){
-        if(size==0){
+        if(front > rear){
             System.out.println("Queue is empty");
             return -1;
 
         }
         else{
             int element=arr[front];
-            front=(front+1)%capacity;
+            front++;
             size--;
             return element;
         }
@@ -65,32 +66,33 @@ class circularQueue1{
     }
 
     boolean isFull(){
-        return size==capacity;
+        return rear==capacity-1;
     }
 
     boolean isEmpty(){
-        return size==0;
+        return front>rear;
     }
 
     int size(){
         return size;
     }
-
 }
-public class CircularQueue
-{
+
+
+
+
+public class Queue {
     public static void main(String[] args) {
-        circularQueue1 q = new circularQueue1(4);
-        q.enqueue(10);
-        q.enqueue(20);
-        q.enqueue(30);
-        q.enqueue(40);
-        q.dequeue();
-        q.dequeue();
-        q.enqueue(70);
-        System.out.println(q.getFront());
-        System.out.println(q.getRear());
+     queue1 q = new queue1(6);
+     q.enqueue(10);
+     q.enqueue(20);
+     q.enqueue(30);
+     q.enqueue(40);
+     q.dequeue();
+     q.dequeue();
+     System.out.println(q.getFront());
+     System.out.println(q.getRear());
+
     }
 
 }
-

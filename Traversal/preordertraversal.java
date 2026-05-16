@@ -1,3 +1,4 @@
+package Traversal;
 class treeNode{
     int data;
     treeNode left;

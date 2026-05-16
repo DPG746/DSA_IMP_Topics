@@ -1,3 +1,4 @@
+package Stack;
 
 class Node{
     int data;
