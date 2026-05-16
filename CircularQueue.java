@@ -43,7 +43,7 @@ public class CircularQueue
         return data;
     }
 
-    //return no of elements
+    //return no of elements n
     public int size(){
         return this.size;
     }
