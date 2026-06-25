@@ -3,7 +3,12 @@ class FindSubsetOfArray{
 
     public static void findsub(String str, String ans, int i){
         if(i==str.length()){
+            if(ans.length()==0){
+                System.out.println("null");
+
+            }else{
             System.out.println(ans);
+            }
             return;
 
         }
